@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+#gift-container {
+    animation: fadeIn 1.5s;
+}
+
+#gift {
+    font-size: 90px;
+    cursor: pointer;
+    animation: bounce 1.2s infinite;
+}
+
+#gift-container p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+#content {
+    display: none;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 20px;
+}
+
+.cake {
+    font-size: 90px;
+    animation: float 2s infinite alternate;
+}
+
+.message {
+    margin-top: 20px;
+    line-height: 1.7;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+}
+
+.from {
+    margin-top: 30px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    font-size: 40px;
+    animation: rise linear forwards;
+}
+
+.confetti {
+    position: absolute;
+    top: -20px;
+    font-size: 20px;
+    animation: fall linear forwards;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-120vh);
+    }
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
